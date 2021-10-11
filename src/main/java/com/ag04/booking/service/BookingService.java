@@ -14,10 +14,10 @@ public class BookingService {
         this.mailService = mailService;
     }
 
-    private AvailabilityService availabilityService;
-    private ReservationService reservationService;
-    private InvoiceService invoiceService;
-    private MailService mailService;
+    private final AvailabilityService availabilityService;
+    private final ReservationService reservationService;
+    private final InvoiceService invoiceService;
+    private final MailService mailService;
 
     public boolean book(BookingRequest request) {
         boolean available = availabilityService.isAvailable(request);
